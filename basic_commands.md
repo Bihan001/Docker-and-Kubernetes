@@ -10,7 +10,7 @@
 - **docker network connect** adds the container to the given container network. That enables container communication by simple container name instead of IP.
 - **docker rm** removes one or more containers. docker rm mycontainer, but make sure the container is not running
 - **docker rmi** removes one or more images. docker rmi myimage, but make sure no running container is based on that image
-- **docker stop** stops one or more containers. docker stop mycontainer stops one container, while **docker stop $(docker ps - -a -q)** stops all running containers.
+- **docker stop**  stops one or more containers. docker stop mycontainer stops one container, while **docker stop $(docker ps -a -q)** stops all running containers.
 - **docker start** starts a stopped container using the last state
 - **docker update --restart=no** updates container policies, that is especially helpful when your container is stuck in a crash loop
 - **docker cp** to copy files from a running container to the host or the way around. **docker cp :/etc/file . to copy /etc/file** to your current directory.
