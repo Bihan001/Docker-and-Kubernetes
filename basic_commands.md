@@ -3,7 +3,7 @@
 - **docker pull**  download a image from Docker Hub registry. Link to the docker image is always shown on the right at dockerhub.
 - **docker build** is used to build your own container based on a Dockerfile. Common use is docker build. to build a container based on the Dockerfile in the current directory (the dot). **docker build -t "myimage:latest"**. creates a container and stores the image under the given name
 - **docker images** or **docker image ls** shows all local storage images
-- **docker run**  Run a docker container based on an image, i.e. **docker run myimage -it bash**. If no local image can be found docker run automatically tries to download the image from Docker hub. **docker run -d myimage** runs the docker container in detached mode. **docker run -p 8080:80 myimage** maps host's port 8080 to container's port 80 while running the container.
+- **docker run**  Run a docker container based on an image, i.e. **docker run myimage -it bash**. If no local image can be found docker run automatically tries to download the image from Docker hub. **docker run -d myimage** runs the docker container in detached mode. **docker run -p 8080:80 -p 3000:80 myimage** maps host's ports 8080 amd 3000 to container's port 80 while running the container.
 - **docker logs** display the logs of a container, you specified. To continue showing log updates just use **docker logs -f mycontainer**
 - **docker volume ls**  lists the volumes, which are commonly used for persisting data of Docker containers.
 - **docker network ls** - list all networks available for docker container
