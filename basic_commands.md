@@ -1,7 +1,7 @@
 - **docker ps** list running containers.
 - **docker ps -a** list all container including stopped container
 - **docker pull**  download a image from Docker Hub registry. Link to the docker image is always shown on the right at dockerhub.
-- **docker build** is used to build your own container based on a Dockerfile. Common use is docker build. to build a container based on the Dockerfile in the current directory (the dot). **docker build -t "myimage:latest"**. creates a container and stores the image under the given name
+- **docker build** is used to build your own container based on a Dockerfile. Common use is docker build. to build a container based on the Dockerfile in the current directory (the dot). **"docker build --tag myimage ."**. creates an image and stores it under the given tag name.
 - **docker images** or **docker image ls** shows all local storage images
 - **docker run**  Run a docker container based on an image, i.e. **docker run myimage -it bash**. If no local image can be found docker run automatically tries to download the image from Docker hub. **docker run -d myimage** runs the docker container in detached mode. **docker run -p 8080:80 -p 3000:80 myimage** maps host's ports 8080 amd 3000 to container's port 80 while running the container. **docker run --name myname myimage** assigns "myname" to the container while running it. **docker run -v C:\Users\bhkai\Desktop:/usr/share/nginx/html nginx:latest** creates a volume and links windows desktop to /usr/share/nginx/html folder while running a container.
 - **docker logs** display the logs of a container, you specified. To continue showing log updates just use **docker logs -f mycontainer**
